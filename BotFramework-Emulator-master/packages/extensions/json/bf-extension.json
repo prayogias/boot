@@ -1,0 +1,89 @@
+{
+  "name": "JSON",
+  "client": {
+    "inspectors": [
+      {
+        "name": "JSON",
+        "src": "public/index.html",
+        "criteria": [
+          {
+            "path": "$.type",
+            "value": "message"
+          },
+          {
+            "path": "valueType",
+            "value": "https://www.botframework.com/schemas/botState"
+          },
+          {
+            "path": "valueType",
+            "value": "https://www.botframework.com/schemas/diff"
+          }
+        ],
+        "summaryText": [
+          "attachments.0.contentType",
+          "text",
+          "label"
+        ],
+        "accessories": [
+          {
+            "id": "json",
+            "states": {
+              "default": {
+                "label": "JSON"
+              },
+              "selected": {
+                "label": "JSON",
+                "aria-selected": true
+              }
+            }
+          },
+          {
+            "id": "leftArrow",
+            "states": {
+              "default": {
+                "icon": "leftArrow"
+              },
+              "selected": {
+                "aria-selected": true,
+                "icon": "leftArrowSelected"
+              },
+              "disabled": {
+                "aria-disabled": true
+              }
+            }
+          },
+          {
+            "id": "rightArrow",
+            "states": {
+              "default": {
+                "icon": "rightArrow"
+              },
+              "selected": {
+                "aria-selected": true,
+                "icon": "rightArrowSelected"
+              },
+              "disabled": {
+                "aria-disabled": true
+              }
+            }
+          },
+          {
+            "id": "diff",
+            "states": {
+              "default": {
+                "label": "Show diff"
+              },
+              "selected": {
+                "label": "Hide diff",
+                "aria-selected": true
+              },
+              "disabled": {
+                "aria-disabled": true
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
